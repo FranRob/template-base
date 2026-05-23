@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Context was compacted. FIRST ACTION: call mem_context to recover prior session state from Engram before continuing any work.'"
+          }
+        ]
+      }
+    ]
+  }
+}
