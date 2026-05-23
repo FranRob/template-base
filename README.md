@@ -1,55 +1,55 @@
 # template-base
 
-A Claude Code project template with multi-agent setup, persistent memory via Engram, and auto-loaded rules.
+Template de proyecto para Claude Code con setup multi-agente, memoria persistente via Engram y reglas modulares auto-cargadas.
 
-## What's included
+## Qué incluye
 
 ```
 .claude/
-├── settings.json          # Post-compaction hook for Engram memory recovery
+├── settings.json          # Hook post-compactación para recuperar estado de Engram
 ├── rules/
-│   ├── git-workflow.md    # Gitflow + PR workflow (always active)
-│   └── security.md        # Security baseline (always active)
+│   ├── git-workflow.md    # Gitflow + flujo de PRs (siempre activo)
+│   └── security.md        # Baseline de seguridad (siempre activo)
 └── agents/
-    └── explorer.md        # Sub-agent that maps code without editing it
+    └── explorer.md        # Sub-agente que mapea el código sin editarlo
 
-.engram/config.json        # Locks the project name for Engram persistent memory
-CLAUDE.md                  # Project instructions for Claude Code
-CLAUDE.local.md.example    # Template for personal overrides (gitignored)
+.engram/config.json        # Bloquea el nombre del proyecto para Engram
+CLAUDE.md                  # Instrucciones del proyecto para Claude Code
+CLAUDE.local.md.example    # Template para overrides personales (gitignoreado)
 ```
 
-## How to use this template
+## Cómo usar este template
 
-1. Click **Use this template** → Create a new repository
-2. Clone your new repo
-3. Fill in `CLAUDE.md` with your project's specifics
-4. Set your project name in `.engram/config.json`
-5. Copy `CLAUDE.local.md.example` → `CLAUDE.local.md` and fill in personal preferences
-6. Add stack-specific rules in `.claude/rules/` (e.g. `api-conventions.md`, `testing.md`)
-7. Open Claude Code — everything is ready
+1. Hacé click en **Use this template** → Create a new repository
+2. Cloná tu nuevo repo
+3. Completá `CLAUDE.md` con los detalles de tu proyecto
+4. Cambiá `project_name` en `.engram/config.json` por el nombre de tu repo
+5. Copiá `CLAUDE.local.md.example` → `CLAUDE.local.md` y completá tus preferencias personales
+6. Agregá reglas específicas de tu stack en `.claude/rules/`
+7. Abrí Claude Code — todo está listo
 
-## What to customize
+## Qué personalizar
 
-| File | What to do |
-|------|-----------|
-| `CLAUDE.md` | Replace all placeholder sections with your project's info |
-| `.engram/config.json` | Set `project_name` to your repo name |
-| `.claude/rules/` | Add rules specific to your stack with `paths:` frontmatter |
-| `.claude/agents/` | Add specialized sub-agents your project needs |
+| Archivo | Qué hacer |
+|---------|-----------|
+| `CLAUDE.md` | Reemplazá los placeholders con la info de tu proyecto |
+| `.engram/config.json` | Cambiá `CHANGE_ME` por el nombre de tu repo |
+| `.claude/rules/` | Agregá reglas específicas de tu stack con frontmatter `paths:` |
+| `.claude/agents/` | Agregá sub-agentes especializados que necesite tu proyecto |
 
-## Rules system
+## Sistema de reglas
 
-Rules in `.claude/rules/` support `paths:` frontmatter — they only load when Claude is working with matching files. This keeps context lean:
+Las reglas en `.claude/rules/` soportan frontmatter `paths:` — solo se cargan cuando Claude trabaja con archivos que coincidan. Esto mantiene el contexto liviano:
 
 ```markdown
 ---
-description: API conventions
+description: Convenciones de API
 paths:
   - "src/modules/**"
 ---
-Your rules here...
+Tus reglas acá...
 ```
 
-## Personal overrides
+## Overrides personales
 
-Copy `CLAUDE.local.md.example` to `CLAUDE.local.md` (gitignored). Use it for language preferences, local environment quirks, or personal workflow rules.
+Copiá `CLAUDE.local.md.example` a `CLAUDE.local.md` (gitignoreado). Usalo para preferencias de idioma, quirks del entorno local o reglas de flujo de trabajo personales.
