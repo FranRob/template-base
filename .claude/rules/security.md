@@ -1,20 +1,20 @@
 ---
-description: Security baseline rules — always active
+description: Reglas base de seguridad — siempre activo
 ---
 
 ## General
 
-- Never log secrets, tokens, passwords, or PII
-- Never hardcode credentials — always use environment variables
-- Validate and sanitize all user input at system boundaries
-- Never trust client-supplied IDs for authorization — verify server-side
+- Nunca loguear secrets, tokens, contraseñas ni PII
+- Nunca hardcodear credenciales — siempre usar variables de entorno
+- Validar y sanitizar todo input del usuario en los límites del sistema
+- Nunca confiar en IDs provistos por el cliente para autorización — verificar server-side
 
-## Multi-tenancy (if applicable)
+## Multi-tenancy (si aplica)
 
-- Every query MUST be scoped to the authenticated tenant/user
-- Never query across tenants, even for admin operations unless explicitly designed for it
+- Toda query DEBE estar scopeada al tenant/usuario autenticado
+- Nunca consultar entre tenants, ni siquiera para operaciones admin salvo que esté diseñado explícitamente para eso
 
-## Dependencies
+## Dependencias
 
-- Never add a dependency without checking it has recent maintenance and no critical CVEs
-- Prefer well-known packages over unknown ones with similar functionality
+- Nunca agregar una dependencia sin verificar que tiene mantenimiento reciente y sin CVEs críticos
+- Preferir paquetes conocidos sobre desconocidos con funcionalidad similar

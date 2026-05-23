@@ -1,22 +1,22 @@
 ---
-description: Git branching and PR workflow — always active
+description: Estrategia de branches y flujo de PRs — siempre activo
 ---
 
-## Branch Strategy (Gitflow)
+## Estrategia de branches (Gitflow)
 
-- `main` — production only. Merges from `develop` on deliberate releases.
-- `develop` — integration branch. All feature branches merge here.
-- Feature branches — short-lived, one per block, branch from `develop`, PR back to `develop`.
+- `main` — solo producción. Se mergea desde `develop` en releases deliberados.
+- `develop` — rama de integración. Todas las feature branches mergean acá.
+- Feature branches — corta duración, una por bloque, se bifurcan desde `develop`, PR de vuelta a `develop`.
 
-## PR Workflow (mandatory)
+## Flujo de PRs (obligatorio)
 
-Every block of work MUST follow this flow — no exceptions:
+Cada bloque de trabajo DEBE seguir este flujo — sin excepciones:
 
-1. Create a GitHub issue describing the block → add `status:approved` label
-2. Create branch from `develop`: `feat/block-XX-description` (or `fix/`, `docs/`, etc.)
-3. Work with conventional commits
-4. Open PR from branch → `develop`
-5. If diff > 400 lines → split into stacked PRs
-6. Merge and close the issue
+1. Crear un issue en GitHub describiendo el bloque → agregar label `status:approved`
+2. Crear branch desde `develop`: `feat/bloque-XX-descripcion` (o `fix/`, `docs/`, etc.)
+3. Trabajar con conventional commits
+4. Abrir PR desde el branch → `develop`
+5. Si el diff supera 400 líneas → dividir en stacked PRs
+6. Mergear y cerrar el issue
 
-Never accumulate multiple blocks into a single PR.
+Nunca acumular múltiples bloques en un solo PR.
