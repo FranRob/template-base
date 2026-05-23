@@ -1,14 +1,14 @@
-# CLAUDE.local.md — Personal overrides (gitignored, never commit)
+# CLAUDE.local.md — Overrides personales (gitignoreado, nunca commitear)
 #
-# Copy this file to CLAUDE.local.md and fill in your personal preferences.
-# These override CLAUDE.md only for your local environment.
+# Copiá este archivo a CLAUDE.local.md y completá tus preferencias.
+# Estos overrides aplican solo a tu entorno local y tienen prioridad sobre CLAUDE.md.
 
-## My Preferences
+## Mis preferencias
 
-- [e.g. "Respond in Spanish (Rioplatense)"]
-- [e.g. "Always run tests before suggesting a commit"]
+- [ej: "Respondé siempre en español rioplatense (voseo)"]
+- [ej: "Corré los tests antes de sugerir un commit"]
 
-## Local Environment Notes
+## Notas del entorno local
 
-- [e.g. "My local DB is on port 5433, not 5432"]
-- [e.g. "I use pnpm, not npm"]
+- [ej: "Mi DB local corre en el puerto 5433, no 5432"]
+- [ej: "Uso pnpm en lugar de npm"]

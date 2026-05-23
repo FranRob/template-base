@@ -1,60 +1,60 @@
-# [project-name]
+# [nombre-del-proyecto]
 
-[One-line description of the project and its main tech stack.]
+[Descripción en una línea del proyecto y su stack principal.]
 
-## Commands
+## Comandos
 
-[Fill in the main commands to run, build, test, and deploy the project.]
+[Completá los comandos principales para correr, buildear, testear y deployar el proyecto.]
 
 ```bash
-# example
-npm run dev     # Start dev server
-npm run build   # Build for production
-npm test        # Run tests
+# ejemplo
+npm run dev     # Servidor de desarrollo
+npm run build   # Build de producción
+npm test        # Correr tests
 ```
 
-## Architecture
+## Arquitectura
 
-[Describe the folder structure and entry points. Keep it brief — focus on what's non-obvious.]
+[Describí la estructura de carpetas y los entry points. Breve — enfocate en lo que no es obvio.]
 
 ```
 src/
-├── [entry-point]    # [what it does]
-└── [key folder]/    # [what it contains]
+├── [entry-point]    # [qué hace]
+└── [carpeta clave]/ # [qué contiene]
 ```
 
-## Data Model
+## Modelo de datos
 
-[List the core entities and their relationships. Only include what Claude needs to understand the domain.]
+[Listá las entidades principales y sus relaciones. Solo lo que Claude necesita para entender el dominio.]
 
-## Environment
+## Entorno
 
-[List required environment variables and where to put them.]
+[Listá las variables de entorno requeridas y dónde van.]
 
 ```
-VARIABLE=value   # what it's for
+VARIABLE=valor   # para qué sirve
 ```
 
-## Priorities
+## Prioridades
 
-1. **Order** — clean branches, one PR per block, linked issues
-2. **Security** — auth, input validation, secrets
-3. **Everything else**
+1. **Orden** — branches limpios, un PR por bloque, issues linkeados
+2. **Seguridad** — auth, validación de inputs, secrets
+3. **Todo lo demás**
 
-## Workflow Rules
+## Reglas de flujo
 
-- **Never commit** unless the user explicitly confirms the feature works end-to-end
-- **Full diagnosis before any fix** — identify ALL root causes first, state them, get confirmation, then code
-- **No speculative improvements** — only change what was asked
+- **Nunca commitear** sin que el usuario confirme explícitamente que la feature funciona end-to-end
+- **Diagnóstico completo antes de cualquier fix** — identificar TODAS las causas raíz, enunciarlas, pedir confirmación, recién después escribir código
+- **Sin mejoras especulativas** — solo cambiar lo que se pidió
 
-## Rules (auto-loaded by Claude)
+## Reglas (auto-cargadas por Claude)
 
-| File | When active |
-|------|-------------|
-| `.claude/rules/git-workflow.md` | Always |
-| `.claude/rules/security.md` | Always |
-| `.claude/rules/[stack].md` | When editing `src/**` — add your own |
+| Archivo | Cuándo está activo |
+|---------|-------------------|
+| `.claude/rules/git-workflow.md` | Siempre |
+| `.claude/rules/security.md` | Siempre |
+| `.claude/rules/[stack].md` | Al editar `src/**` — agregá las tuyas |
 
-## Available Agents
+## Agentes disponibles
 
-- `explorer` — maps codebase structure, never edits code
+- `explorer` — mapea la estructura del codebase, nunca edita código
